@@ -1,0 +1,11 @@
+syntax = "proto3";
+option go_package = "metric/proto";
+
+package metric;
+
+message NDIMCounter {
+  string name = 1;                    // Counter Metric Name
+  string description = 2;             // Counter Metric Description
+  map<string, string> properties = 4; // Metric Headers like : HostIPAddress
+  map<string,int64> dimCounters = 5;  // Dimensions or Lables or Partitions along with counter 
+}

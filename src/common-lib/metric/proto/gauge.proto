@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package metric;
+
+message Gauge {
+  string name = 1;                    // Gauge Metric Name
+  string description = 2;             // Gauge Metric Description
+  int64 value = 3;                    // Gauge Metric Value
+  string unit = 4;                    // Gauge Metric Unit
+  map<string, string> properties = 5; // Metric Headers like : HostIPAddress
+}

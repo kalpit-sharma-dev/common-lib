@@ -1,0 +1,140 @@
+// Package reflect provides some punk-rock reflection which is not in the stdlib.
+package reflect
+
+import (
+	"fmt"
+	r "reflect"
+	"strings"
+	"sync"
+)
+
+var (
+	structMapMutex sync.RWMutex
+	structMap      = make(map[r.Type]*structInfo)
+)
+
+type (
+	fieldInfo struct {
+		Key string
+		Num int
+	}
+
+	structInfo struct {
+		// FieldsMap is used to access fields by their key
+		FieldsMap map[string]fieldInfo
+		// FieldsList allows iteration over the fields in their struct order.
+		FieldsList []fieldInfo
+	}
+)
+
+// StructToMap converts a struct to map. The object's default key string
+// is the struct field name but can be specified in the struct field's
+// tag value. The "cql" key in the struct field's tag value is the key
+// name. Examples:
+//
+//   // Field appears in the resulting map as key "myName".
+//   Field int `cql:"myName"`
+//
+//   // Field appears in the resulting as key "Field"
+//   Field int
+//
+//   // Field appears in the resulting map as key "myName"
+//   Field int "myName"
+func StructToMap(val interface{}) (map[string]interface{}, bool) {
+	// indirect so function works with both structs and pointers to them
+	structVal := r.Indirect(r.ValueOf(val))
+	kind := structVal.Kind()
+	if kind != r.Struct {
+		return nil, false
+	}
+	sinfo := getStructInfo(structVal)
+	mapVal := make(map[string]interface{}, len(sinfo.FieldsList))
+	for _, field := range sinfo.FieldsList {
+		if structVal.Field(field.Num).CanInterface() {
+			mapVal[field.Key] = structVal.Field(field.Num).Interface()
+		}
+	}
+	return mapVal, true
+}
+
+// MapToStruct converts a map to a struct. It is the inverse of the StructToMap
+// function. For details see StructToMap.
+func MapToStruct(m map[string]interface{}, struc interface{}) error {
+	val := r.Indirect(r.ValueOf(struc))
+	sinfo := getStructInfo(val)
+	for k, v := range m {
+		if info, ok := sinfo.FieldsMap[k]; ok {
+			structField := val.Field(info.Num)
+			if structField.Type().Kind() == r.TypeOf(v).Kind() {
+				structField.Set(r.ValueOf(v).Convert(structField.Type()))
+			}
+		}
+	}
+	return nil
+}
+
+// FieldsAndValues returns a list field names and a corresponding list of values
+// for the given struct. For details on how the field names are determined please
+// see StructToMap.
+func FieldsAndValues(val interface{}) ([]string, []interface{}, bool) {
+	// indirect so function works with both structs and pointers to them
+	structVal := r.Indirect(r.ValueOf(val))
+	kind := structVal.Kind()
+	if kind != r.Struct {
+		return nil, nil, false
+	}
+	sinfo := getStructInfo(structVal)
+	fields := make([]string, len(sinfo.FieldsList))
+	values := make([]interface{}, len(sinfo.FieldsList))
+	for i, info := range sinfo.FieldsList {
+		field := structVal.Field(info.Num)
+		fields[i] = info.Key
+		values[i] = field.Interface()
+	}
+	return fields, values, true
+}
+
+func getStructInfo(v r.Value) *structInfo {
+	st := r.Indirect(v).Type()
+	structMapMutex.RLock()
+	sInfo, found := structMap[st]
+	structMapMutex.RUnlock()
+	if found {
+		return sInfo
+	}
+
+	n := st.NumField()
+	fieldsMap := make(map[string]fieldInfo, n)
+	fieldsList := make([]fieldInfo, 0, n)
+	for i := 0; i != n; i++ {
+		field := st.Field(i)
+		info := fieldInfo{Num: i}
+		tag := field.Tag.Get("cql")
+		// If there is no cql specific tag and there are no other tags
+		// set the cql tag to the whole field tag
+		if tag == "" && !strings.Contains(string(field.Tag), ":") {
+			tag = string(field.Tag)
+		}
+		if tag != "" {
+			info.Key = tag
+		} else {
+			info.Key = field.Name
+		}
+
+		if _, found = fieldsMap[info.Key]; found {
+			msg := fmt.Sprintf("Duplicated key '%s' in struct %s", info.Key, st.String())
+			panic(msg)
+		}
+
+		fieldsList = append(fieldsList, info)
+		fieldsMap[info.Key] = info
+	}
+	sInfo = &structInfo{
+		fieldsMap,
+		fieldsList,
+	}
+	structMapMutex.Lock()
+	structMap[st] = sInfo
+	structMapMutex.Unlock()
+	return sInfo
+}

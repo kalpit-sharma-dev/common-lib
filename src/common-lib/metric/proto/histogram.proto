@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package metric;
+
+message Histogram {
+  string name = 1;                    // Histogram Metric Name
+  string description = 2;             // Histogram Metric Description
+  repeated double values = 3;         // Histogram Metric Value
+  map<string, string> properties = 5; // Metric Headers like : HostIPAddress
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package metric;
+
+  message Event {
+    int64 start = 2;                     //start timestamp of event
+    int64 end = 3;                       //end timestamp of event
+    int64 timeoutMinutes = 4;            //event TTL, the time for which event will be displayed
+    string source = 5;                   //source from which event was generated
+    string description = 6;              //description of the event timestamp
+    string remediationAction = 7;        //remediation action
+    string title = 11;                   //start timestamp
+    map<string, string> properties = 20; // Metric Headers like : HostIPAddress
+  }

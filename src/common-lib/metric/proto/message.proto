@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package metric;
+option go_package = "../metric";
+
+message Message {
+  string namespace = 3;               // Metric Namespace
+  string processName = 4;             // Metric Process Name
+  string hostName = 5;                // Metric Host Name
+  int64 timestampUnix = 6;            // Matric Publish timestamp
+  repeated string address = 7;        // IPAddress
+  repeated string tags = 8;           // Tags
+  map<string, string> properties = 9; // Metric Headers like : HostIPAddress
+  message Metric {
+    string type = 1; // Metric Type
+    bytes value = 2; // Metric Value
+  }
+  repeated Metric metric = 1;
+}

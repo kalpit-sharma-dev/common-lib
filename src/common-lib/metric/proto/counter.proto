@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package metric;
+
+message Counter {
+  string name = 1;                    // Counter Metric Name
+  string description = 2;             // Counter Metric Description
+  int64 value = 3;                    // Counter Metric Value
+  map<string, string> properties = 4; // Metric Headers like : HostIPAddress
+}
