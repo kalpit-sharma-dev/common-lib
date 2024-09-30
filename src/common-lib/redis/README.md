@@ -158,9 +158,9 @@ type Config struct {
 
 **Example**
     Please refer "devicestatenotifier" package in "platform-agent-service".
-    Link : https://github.com/ContinuumLLC/platform-agent-service/tree/master/src/devicestatenotifier
+    Link : https://github.com/googleLLC/platform-agent-service/tree/master/src/devicestatenotifier
 
-**Wiki** : https://continuum.atlassian.net/wiki/spaces/EN/pages/1672348148/Device+Down+-+Redis+-+SDD
+**Wiki** : https://google.atlassian.net/wiki/spaces/EN/pages/1672348148/Device+Down+-+Redis+-+SDD
 
 ### Contribution
 

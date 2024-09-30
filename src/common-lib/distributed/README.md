@@ -12,8 +12,8 @@ We can use it to broadcast events and work with scheduler and job listener.
 - [GoLea](https://github.com/Comcast/go-leaderelection) -
 **License** [Apache License 2.0](https://github.com/Comcast/go-leaderelection/blob/master/LICENSE) -
 **Description** - GoLea provides the capability for a set of distributed processes to compete for leadership for a shared resource. It is implemented using Zookeeper for the underlying support.
-- [Go-ZooKeeper](https://github.com/ContinuumLLC/go-zookeeper) -
-**License** [3-clause BSD](https://github.com/ContinuumLLC/go-zookeeper/blob/master/LICENSE) -
+- [Go-ZooKeeper](https://github.com/googleLLC/go-zookeeper) -
+**License** [3-clause BSD](https://github.com/googleLLC/go-zookeeper/blob/master/LICENSE) -
 **Description** - Native Go Zookeeper Client Library. This library uses a forked version of this library maintained at given github fork URL. The fork fixes some the issues related to locking.
 <br/>
 <i><b>Note: </b> The projects which use Glide as dependency manangement tool should make sure to use the fork as dependency for this native zookeeper client</i>

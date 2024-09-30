@@ -50,28 +50,28 @@ const (
 	HdrRetryAfter HeaderKey = "Retry-After"
 
 	// HdrRateLimitingFactor describes the factor by which client should limit further requests. To be used i conjunction with HdrRateLimitingType
-	HdrRateLimitingFactor HeaderKey = "Continuum-Rate-Limiting-Factor"
+	HdrRateLimitingFactor HeaderKey = "google-Rate-Limiting-Factor"
 
 	// HdrRateLimitingType describes if rate limiting is sequential or exponential. To be used i conjunction with HdrRateLimitingFactor
-	HdrRateLimitingType HeaderKey = "Continuum-Rate-Limiting-Type"
+	HdrRateLimitingType HeaderKey = "google-Rate-Limiting-Type"
 
 	//HdrInactivePath describes which path flow on AMS has been rate limited oe delayed. Possible values "broker" and "heartbeat"
-	HdrInactivePath HeaderKey = "Continuum-Inactive-Path"
+	HdrInactivePath HeaderKey = "google-Inactive-Path"
 
 	//HdrPluginDataPersist describes whether to persist plugin data if server is offline
-	HdrPluginDataPersist HeaderKey = "Continuum-Plugin-Persist-Data"
+	HdrPluginDataPersist HeaderKey = "google-Plugin-Persist-Data"
 
 	//HdrMessageDeliveryType allows agent to make decisions about its delivery. Possible values- offline, batched, supercritical etc.
-	HdrMessageDeliveryType HeaderKey = "Continuum-Message-Delivery-Type"
+	HdrMessageDeliveryType HeaderKey = "google-Message-Delivery-Type"
 
 	// HdrForceSend describes whether to try sending data even if server is offline
-	HdrForceSend HeaderKey = "Continuum-Plugin-Force-Send"
+	HdrForceSend HeaderKey = "google-Plugin-Force-Send"
 
 	// HdrBatchSend describes whether to send messages in a batch
-	HdrBatchSend HeaderKey = "Continuum-Batch-Send"
+	HdrBatchSend HeaderKey = "google-Batch-Send"
 
 	// HdrErrorCode is for top level error code for a failed request
-	HdrErrorCode HeaderKey = "Continuum-Plugin-Error-Code"
+	HdrErrorCode HeaderKey = "google-Plugin-Error-Code"
 
 	//HdrContentMD5 is MD5 hash key
 	HdrContentMD5 HeaderKey = "Content-MD5"
@@ -80,7 +80,7 @@ const (
 	HdrContentWebhook HeaderKey = "Content-Webhook"
 
 	//HdrAPIVersion indicates version of the API
-	HdrAPIVersion HeaderKey = "Continuum-API-Version"
+	HdrAPIVersion HeaderKey = "google-API-Version"
 
 	//HdrDataCompressionType indicates message contains data compression type
 	HdrDataCompressionType = "Data-Compression-Type"
@@ -110,112 +110,112 @@ const (
 	StatusNoContent ResponseStatus = 204
 
 	//HdrPluginPath describes Broker URL where the data would be posted
-	HdrPluginPath HeaderKey = "Continuum-Plugin-Path"
+	HdrPluginPath HeaderKey = "google-Plugin-Path"
 
 	//HdrBrokerPath describes Broker URL where the data would be posted
-	HdrBrokerPath HeaderKey = "Continuum-Plugin-Broker-Path"
+	HdrBrokerPath HeaderKey = "google-Plugin-Broker-Path"
 
 	//HdrCommunicationPath describes Broker URL where the data would be posted
-	HdrCommunicationPath HeaderKey = "Continuum-Plugin-Communication-Path"
+	HdrCommunicationPath HeaderKey = "google-Plugin-Communication-Path"
 
 	//HdrCommunicationURI describes Communication URL where the data would be posted
-	HdrCommunicationURI HeaderKey = "Continuum-Communication-URI"
+	HdrCommunicationURI HeaderKey = "google-Communication-URI"
 
 	//HdrCommunicationMethod describes Communication Method where the data would be posted
-	HdrCommunicationMethod HeaderKey = "Continuum-Communication-Method"
+	HdrCommunicationMethod HeaderKey = "google-Communication-Method"
 
 	//HdrTaskInput describes Task Input where for execution
-	HdrTaskInput HeaderKey = "Continuum-Plugin-Task-Input"
+	HdrTaskInput HeaderKey = "google-Plugin-Task-Input"
 
 	//HdrTaskBody describes Task Body where for execution
-	HdrTaskBody HeaderKey = "Continuum-Plugin-Task-Body"
+	HdrTaskBody HeaderKey = "google-Plugin-Task-Body"
 
 	//HdrMessageType describes Message Type to process mailbox message at plugin
-	HdrMessageType HeaderKey = "Continuum-Plugin-Message-Type"
+	HdrMessageType HeaderKey = "google-Plugin-Message-Type"
 
 	//HdrProbeEndpointId describes Probe EndpointId for get ids for vms and hyperv
-	HdrProbeEndpointId HeaderKey = "Continuum-Probe-Endpointid"
+	HdrProbeEndpointId HeaderKey = "google-Probe-Endpointid"
 
 	//HdrEsxiHostID describes unique identification ID to identify Esxi Host
-	HdrEsxiHostID HeaderKey = "Continuum-Esxi-Host-Id"
+	HdrEsxiHostID HeaderKey = "google-Esxi-Host-Id"
 
 	//HdrNetworkDeviceID describes unique identification ID to identify network device
-	HdrNetworkDeviceID HeaderKey = "Continuum-Network-Device-Id"
+	HdrNetworkDeviceID HeaderKey = "google-Network-Device-Id"
 
 	//HdrVcenterID describes unique identification ID to identify vCenter
-	HdrVcenterID HeaderKey = "Continuum-Vcenter-Id"
+	HdrVcenterID HeaderKey = "google-Vcenter-Id"
 
 	//HdrIPAddress describes unique IPAddress to identify Esxi Host
-	HdrIPAddress HeaderKey = "Continuum-Ipaddress"
+	HdrIPAddress HeaderKey = "google-Ipaddress"
 
 	//HdrRegID describes unique regID to identify Esxi Host
-	HdrRegID HeaderKey = "Continuum-Regid"
+	HdrRegID HeaderKey = "google-Regid"
 
 	//HdrTransactionID describes RequestID/TransactionID/CorreleationID to track data across servers and processes.
 	HdrTransactionID HeaderKey = "X-Request-Id"
 
 	//HdrHTTPSecure This is temporary Key used for heartbeat, would be removed once the heartbeat changes are done in communication service
-	HdrHTTPSecure HeaderKey = "Continuum-HTTP-Secure"
+	HdrHTTPSecure HeaderKey = "google-HTTP-Secure"
 
 	//HdrAgentOS : This is a header key to pass Agent OS; as a part of any request from Agent
-	HdrAgentOS string = "Continuum-Agent-OS"
+	HdrAgentOS string = "google-Agent-OS"
 
 	//HdrAgentVersion : This is a header key to pass Agent version; as a part of any request from Agent
-	HdrAgentVersion string = "Continuum-Agent-Version"
+	HdrAgentVersion string = "google-Agent-Version"
 
 	//HdrAgentCoreVersion : This is a header key to pass AgentCore version; as a part of any request from Agent
-	HdrAgentCoreVersion string = "Continuum-AgentCore-Version"
+	HdrAgentCoreVersion string = "google-AgentCore-Version"
 
 	//HdrPluginTimeout :  This is a header key to pass timeout to the respective plugin
 	HdrPluginTimeout HeaderKey = "Plugin-Execution-Timeout"
 
 	//HdrResourcePath describes Resource URL for which data is to be fetched
-	HdrResourcePath HeaderKey = "Continuum-Plugin-Resource-Path"
+	HdrResourcePath HeaderKey = "google-Plugin-Resource-Path"
 
 	//HdrEventName describes list of events captured by plugin
-	HdrEventName HeaderKey = "Continuum-Plugin-Event-Id"
+	HdrEventName HeaderKey = "google-Plugin-Event-Id"
 
 	//HdrDirectSend describes Resource URL for which data is to be fetched
-	HdrDirectSend HeaderKey = "Continuum-Platform-Direct-Send"
+	HdrDirectSend HeaderKey = "google-Platform-Direct-Send"
 
 	// HdrOfflineMessageHash denotes hash for offline persisted message in the form of unixnano time
-	HdrOfflineMessageHash HeaderKey = "Continuum-Offline-Message-Hash"
+	HdrOfflineMessageHash HeaderKey = "google-Offline-Message-Hash"
 
 	//HdrPlatformMessage denotes that this message is meant to be consumed by platform service (aka AMS)
-	HdrPlatformMessage HeaderKey = "Continuum-Platform-Message"
+	HdrPlatformMessage HeaderKey = "google-Platform-Message"
 
 	//HdrHeartbeatPersist denotes that this message is meant to be consumed by platform service (aka AMS)
-	HdrHeartbeatPersist HeaderKey = "Continuum-Platform-Heartbeat-Persist"
+	HdrHeartbeatPersist HeaderKey = "google-Platform-Heartbeat-Persist"
 
 	//HdrAgentDeleteSource denotes that the source of agent deregistration
-	HdrAgentDeleteSource HeaderKey = "Continuum-Agent-Delete-Source"
+	HdrAgentDeleteSource HeaderKey = "google-Agent-Delete-Source"
 
 	//HdrAgentDeleteTimestamp denotes that the timestamp of agent deregistration
-	HdrAgentDeleteTimestamp HeaderKey = "Continuum-Agent-Delete-Timestamp"
+	HdrAgentDeleteTimestamp HeaderKey = "google-Agent-Delete-Timestamp"
 
 	//HdrAgentPayloadSign denotes the payload's digest signature, signed by agent's private key
-	HdrAgentPayloadSign HeaderKey = "Continuum-Agent-Payload-Sign"
+	HdrAgentPayloadSign HeaderKey = "google-Agent-Payload-Sign"
 
 	//HdrResponseErrCode error code along with HTTP(s) response
-	HdrResponseErrCode HeaderKey = "Continuum-Response-Err-Code"
+	HdrResponseErrCode HeaderKey = "google-Response-Err-Code"
 
 	//HdrHeartbeatCounter denotes the number of successfull heartbeat counts.
-	HdrHeartbeatCounter HeaderKey = "Continuum-Platform-Heartbeat-Counter"
+	HdrHeartbeatCounter HeaderKey = "google-Platform-Heartbeat-Counter"
 
 	//HdrProxySetting denotes the proxy configuration to be used while communication
-	HdrProxySetting HeaderKey = "Continuum-Platform-Proxy-Setting"
+	HdrProxySetting HeaderKey = "google-Platform-Proxy-Setting"
 
 	//HdrRegistrationToken denotes the token used during registration
-	HdrRegistrationToken HeaderKey = "Continuum-Platform-Registration-Token"
+	HdrRegistrationToken HeaderKey = "google-Platform-Registration-Token"
 
 	//HdrAgentServiceURL denotes the url used by AgentCore to communicate with DC
-	HdrAgentServiceURL HeaderKey = "Continuum-Platform-Agent-Service-Url"
+	HdrAgentServiceURL HeaderKey = "google-Platform-Agent-Service-Url"
 
 	//HdrWebFunctionName denotes the name of function used by AgentCore to communicate with DC
-	HdrWebFunctionName HeaderKey = "Continuum-Plugin-Web-Function-Name"
+	HdrWebFunctionName HeaderKey = "google-Plugin-Web-Function-Name"
 
 	//HdrProviderName denotes the name of provider used by AgentCore to communicate with DC
-	HdrProviderName HeaderKey = "Continuum-Plugin-Provider-Name"
+	HdrProviderName HeaderKey = "google-Plugin-Provider-Name"
 	//HdrAgentUninstallReason denotes the reason used by AgentCore for uninstall reason to communicator plugin
 	HdrAgentShutdownReason HeaderKey = "Agent-Shutdown-Reason"
 

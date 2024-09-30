@@ -16,7 +16,7 @@ import	"gitlab.kksharmadevdev.com/platform/platform-common-lib/src/v6/constants"
 TransactionID string for transactions ID
 
 ```go
-const TransactionID = "continuum.message.transaction.id"
+const TransactionID = "google.message.transaction.id"
 ```
 
 XRequestID HTTP X-Request-ID Correlates HTTP requests between a client and server

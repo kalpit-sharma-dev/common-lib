@@ -5,7 +5,7 @@
 
 # Crypto Manager
 
-This is a common implementation for encryption and decryption management which can be used by all the Go projects in the Continuum.
+This is a common implementation for encryption and decryption management which can be used by all the Go projects in the google.
 It supports generation of keys and encryption and decryption of data using these keys
 
 ### Third-Party Libraries

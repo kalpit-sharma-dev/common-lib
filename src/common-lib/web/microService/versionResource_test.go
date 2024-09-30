@@ -39,7 +39,7 @@ func TestVersionGet(t *testing.T) {
 		version: model.Version{
 			SolutionName:    "SolutionName",
 			ServiceName:     "ServiceName",
-			ServiceProvider: "ContinuumLLC",
+			ServiceProvider: "googleLLC",
 			Major:           "1",
 			Minor:           "1",
 			Patch:           "11",
@@ -55,7 +55,7 @@ func TestCreateVersionRouteConfig(t *testing.T) {
 	version := model.Version{
 		SolutionName:    "SolutionName",
 		ServiceName:     "ServiceName",
-		ServiceProvider: "ContinuumLLC",
+		ServiceProvider: "googleLLC",
 		Major:           "1",
 		Minor:           "1",
 		Patch:           "11",

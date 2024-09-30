@@ -21,7 +21,7 @@ import (
 var version = aModelVersion.Version{
 	Name:            "SolutionName",
 	ServiceName:     "ServiceName",
-	ServiceProvider: "ContinuumLLC",
+	ServiceProvider: "googleLLC",
 	ServiceVersion:  "1.1.11",
 	BuildNumber:     model.BuildVersion,
 }
@@ -30,7 +30,7 @@ var healthCheck = model.HealthCheck{
 	Version: model.Version{
 		SolutionName:    "SolutionName",
 		ServiceName:     "ServiceName",
-		ServiceProvider: "ContinuumLLC",
+		ServiceProvider: "googleLLC",
 		Major:           "1",
 		Minor:           "1",
 		Patch:           "11",

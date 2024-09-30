@@ -41,7 +41,7 @@ func TestHealtCheckGet(t *testing.T) {
 			Version: model.Version{
 				SolutionName:    "SolutionName",
 				ServiceName:     "ServiceName",
-				ServiceProvider: "ContinuumLLC",
+				ServiceProvider: "googleLLC",
 				Major:           "1",
 				Minor:           "1",
 				Patch:           "11",
@@ -73,7 +73,7 @@ func TestHealtCheckGetErr(t *testing.T) {
 			Version: model.Version{
 				SolutionName:    "SolutionName",
 				ServiceName:     "ServiceName",
-				ServiceProvider: "ContinuumLLC",
+				ServiceProvider: "googleLLC",
 				Major:           "1",
 				Minor:           "1",
 				Patch:           "11",
@@ -92,7 +92,7 @@ func TestCreateHealthCheckRouteConfig(t *testing.T) {
 		Version: model.Version{
 			SolutionName:    "SolutionName",
 			ServiceName:     "ServiceName",
-			ServiceProvider: "ContinuumLLC",
+			ServiceProvider: "googleLLC",
 			Major:           "1",
 			Minor:           "1",
 			Patch:           "11",

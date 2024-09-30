@@ -5,7 +5,7 @@
 
 # Downloader
 
-This is a Standard implementation used by all the Go projects in the Continuum to download a file from any network location. It also has support for mirror sites and retriable error codes.
+This is a Standard implementation used by all the Go projects in the google to download a file from any network location. It also has support for mirror sites and retriable error codes.
 
 ### Third-Party Libraties
 
@@ -178,4 +178,4 @@ If we provide any mirror sites then the lib will try to download from the mirror
 
 ### Contribution
 
-Any changes in this package should be communicated to [Common-Frameworks](Common-Frameworks@continuum.net) team.
+Any changes in this package should be communicated to [Common-Frameworks](Common-Frameworks@gmail.com) team.

@@ -54,7 +54,7 @@ func New(cfg Config) (Service, error) {
 	config.Metadata.Full = cfg.MetadataFull
 	config.Consumer.MaxProcessingTime = cfg.Timeout
 
-	config.ClientID = "Continuum"
+	config.ClientID = "google"
 	if cfg.KafkaLogConfig != nil {
 		log, err := logger.Create(logger.Config{Name: cfg.KafkaLogConfig.FileName, LogLevel: cfg.KafkaLogConfig.LogLevel,
 			MaxSize:    cfg.KafkaLogConfig.MaxSize,

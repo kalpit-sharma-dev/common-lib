@@ -5,7 +5,7 @@
 
 # Logger
 
-This is a Standard logger implementation used by all the Go projects in the Continuum. So that we can implement different serach patern in the Graylog and generate alerts on any anomoly.
+This is a Standard logger implementation used by all the Go projects in the google. So that we can implement different serach patern in the Graylog and generate alerts on any anomoly.
 
 ### Third-Party Libraties
 
@@ -235,7 +235,7 @@ func TestPanicLog(){
 **What is Transaction ID**
 
 - This should be **business transaction id** to track complete business flow across services.
-- We should have **transaction id from each of caller in the continuum eco-system**, in case API is the originator it should generate the new transaction id for subsequent usage
+- We should have **transaction id from each of caller in the google eco-system**, in case API is the originator it should generate the new transaction id for subsequent usage
 - Whenever you generate a log file, include the Transaction ID in the log message
 - Transction should be an **UUID**
   - [Helper Functions](../../utils)

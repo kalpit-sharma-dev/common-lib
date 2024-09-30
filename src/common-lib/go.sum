@@ -45,10 +45,10 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/Comcast/go-leaderelection v0.0.0-20181102191523-272fd9e2bddc h1:d+UT+QyUT6hFKRZCYOSugx+evnm0jurImPyBZGUjxLo=
 github.com/Comcast/go-leaderelection v0.0.0-20181102191523-272fd9e2bddc/go.mod h1:i7z5KF7/zOF0Tzu/mQIyWPfdg5CxOixe1vh/mmgCcls=
-github.com/ContinuumLLC/go-zookeeper v1.0.0 h1:NOus737k8ulWcKoLLeuw/p8j2qAfR0UfDKKZlwx4X+s=
-github.com/ContinuumLLC/go-zookeeper v1.0.0/go.mod h1:elzzxiJ6IzDQUHhYJpBaki3B32GsA/RR2s3Klkd3n10=
-github.com/ContinuumLLC/hystrix-go v0.0.0-20190403132145-d82962fc32a8 h1:AB8e6wZg0m8/wAjWxsrecfqDyE3y/wZGpkda1tSTGuw=
-github.com/ContinuumLLC/hystrix-go v0.0.0-20190403132145-d82962fc32a8/go.mod h1:nXyhE6Txts9YjzPp8KBoBm3k7gUOtRwXQ+Rq3ljpSMk=
+github.com/googleLLC/go-zookeeper v1.0.0 h1:NOus737k8ulWcKoLLeuw/p8j2qAfR0UfDKKZlwx4X+s=
+github.com/googleLLC/go-zookeeper v1.0.0/go.mod h1:elzzxiJ6IzDQUHhYJpBaki3B32GsA/RR2s3Klkd3n10=
+github.com/googleLLC/hystrix-go v0.0.0-20190403132145-d82962fc32a8 h1:AB8e6wZg0m8/wAjWxsrecfqDyE3y/wZGpkda1tSTGuw=
+github.com/googleLLC/hystrix-go v0.0.0-20190403132145-d82962fc32a8/go.mod h1:nXyhE6Txts9YjzPp8KBoBm3k7gUOtRwXQ+Rq3ljpSMk=
 github.com/DATA-DOG/go-sqlmock v1.4.1 h1:ThlnYciV1iM/V0OSF/dtkqWb6xo5qITT1TJBG1MRDJM=
 github.com/DATA-DOG/go-sqlmock v1.4.1/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
 github.com/DataDog/zstd v1.4.9-0.20210607132535-4fa4b6b2bd43 h1:QI12HJ6+fzHeyOgI5SNPIcaH7c884guat5/zxu7nsF0=

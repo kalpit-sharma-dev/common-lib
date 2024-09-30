@@ -5,7 +5,7 @@
 
 # Circuit Breaker
 
-This is a Standard circuit breaker implementation used by all the Go projects in the Continuum.
+This is a Standard circuit breaker implementation used by all the Go projects in the google.
 
 ### Third-Party Libraties
 
@@ -19,7 +19,7 @@ This is a Standard circuit breaker implementation used by all the Go projects in
 ```yaml
 package: github.com/afex/hystrix-go
 version: 4f7f0a216ae56fb0ef5f800521762de684b5598f
-repo: https://github.com/ContinuumLLC/hystrix-go
+repo: https://github.com/googleLLC/hystrix-go
 ```
 
 ### [Example](example/example.go)

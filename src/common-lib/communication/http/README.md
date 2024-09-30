@@ -5,7 +5,7 @@
 
 # HTTP Communication
 
-This is a Standard HTTP communication implementation used by all the Go projects in the Continuum.
+This is a Standard HTTP communication implementation used by all the Go projects in the google.
 ignoreProxy - will decide do we need to include proxy settings while communnication or not
 
 ## Import Statement

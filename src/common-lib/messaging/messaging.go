@@ -19,11 +19,11 @@ const (
 	ServiceCreationFailed = "ServiceCreationFailed"
 
 	//MessageType : is a key to hold message Type
-	MessageType = "continuum.message.type"
+	MessageType = "google.message.type"
 	//TransactionID for transaction key in header map
 	TransactionID string = constants.TransactionID
 	//DataCenterTimeStamp for datetimestamp key in header map
-	DataCenterTimeStamp string = "continuum.message.dc.timestamp"
+	DataCenterTimeStamp string = "google.message.dc.timestamp"
 	//SiteMigrationMessageType to be used in site migration data pushed on kafka
 	SiteMigrationMessageType = "SITE-MIGRATION"
 )

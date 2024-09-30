@@ -5,7 +5,7 @@
 
 # Downloader
 
-This is a Standard implementation used by all the Go projects in the Continuum to download a file from any network location.
+This is a Standard implementation used by all the Go projects in the google to download a file from any network location.
 
 ### Third-Party Libraties
 
@@ -49,4 +49,4 @@ service := grab.GetDownloader(&client.Config{
 
 ### Contribution
 
-Any changes in this package should be communicated to [Common-Frameworks](Common-Frameworks@continuum.net) team.
+Any changes in this package should be communicated to [Common-Frameworks](Common-Frameworks@gmail.com) team.

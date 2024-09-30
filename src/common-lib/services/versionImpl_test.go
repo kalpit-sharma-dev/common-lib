@@ -24,7 +24,7 @@ func TestGetVersion(t *testing.T) {
 	ver := model.Version{
 		SolutionName:    "SolutionName",
 		ServiceName:     "ServiceName",
-		ServiceProvider: "ContinuumLLC",
+		ServiceProvider: "googleLLC",
 		Major:           "1",
 		Minor:           "1",
 		Patch:           "11",

@@ -14,18 +14,18 @@ import (
 const (
 	// Replace sender@example.com with your "From" address.
 	// This address must be verified with Amazon SES.
-	sender = "nitin.kothari@continuum.net"
+	sender = "nitin.kothari@gmail.com"
 
 	// Replace recipient@example.com with a "To" address. If your account
 	// is still in the sandbox, this address must be verified.
-	recipient = "Recipient@continuum.net"
+	recipient = "Recipient@gmail.com"
 
 	// Specify a configuration set. To use a configuration
 	// set, comment the next line and line 92.
 	//ConfigurationSet = "ConfigSet"
 
 	// The subject line for the email.
-	subject = "Important Notification from Continuum"
+	subject = "Important Notification from google"
 
 	htmlTemplate = "<p>Welcome to ITSupport247. Your account has been successfully created. {emailBody} </p>"
 	// The HTML body for the email.
@@ -39,7 +39,7 @@ const (
 
 func TestAWSEmailClient(t *testing.T) {
 	content := &EmailContent{}
-	content.AddRecipientEmail(recipient).AddRecipientEmail("nitin.kothari@continuum.net")
+	content.AddRecipientEmail(recipient).AddRecipientEmail("nitin.kothari@gmail.com")
 	content.CharSet = DefaultCharset
 	content.TextBody = textBody
 	content.Sender = sender
@@ -63,7 +63,7 @@ func TestAWSEmailClient(t *testing.T) {
 
 func TestSES_ErrCodeConfigurationSet(t *testing.T) {
 	content := &EmailContent{}
-	content.AddRecipientEmail(recipient).AddRecipientEmail("nitin.kothari@continuum.net")
+	content.AddRecipientEmail(recipient).AddRecipientEmail("nitin.kothari@gmail.com")
 	content.Sender = sender
 
 	ctrl := gomock.NewController(t)

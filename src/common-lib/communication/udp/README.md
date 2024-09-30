@@ -4,7 +4,7 @@
 </p>
 
 # UDP
-This is a Standard UDP communication implementation used by all the Go projects in the Continuum.
+This is a Standard UDP communication implementation used by all the Go projects in the google.
 
 ### [Example](example/example.go)
 

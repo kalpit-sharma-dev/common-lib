@@ -5,7 +5,7 @@
 
 # Metric
 
-This is a Standard Metric collector implementation used by all the Go projects in the Continuum for Application metric collection.
+This is a Standard Metric collector implementation used by all the Go projects in the google for Application metric collection.
 
 ### Libraties
 

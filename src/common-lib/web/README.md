@@ -5,7 +5,7 @@
 
 # Light weight wrapper of mux to provide middlware functionality
 
-This is a common implementation for mux implementation which can be used by all the Go projects in the Continuum.
+This is a common implementation for mux implementation which can be used by all the Go projects in the google.
 It supports middleware functionalty.
 
 ### Third-Party Libraries

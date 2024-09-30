@@ -26,7 +26,7 @@ version: a8f6dc7e8f46a5d11c01d9da1e887bb5a51fd107
 **Import Statement**
 
 ```go
-import	retry "github.com/ContinuumLLC/platform-common-lib/src/retry"
+import	retry "github.com/googleLLC/platform-common-lib/src/retry"
 ```
 
 **Registration**

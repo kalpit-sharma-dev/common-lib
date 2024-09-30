@@ -1,5 +1,5 @@
 <p align="center">
-<img height=70px src="../../../docs/images/ContinuumNewLogo.png">
+<img height=70px src="../../../docs/images/googleNewLogo.png">
 <img height=100px src="../../../docs/images/Go-Logo_Blue.png">
 </p>
 
@@ -46,7 +46,7 @@ import "gitlab.kksharmadevdev.com/platform/platform-common-lib/src/v6/notificati
 ```go
     content := &EmailContent{}
     content.AddRecipientEmail(Recipient).
-            AddRecipientEmail("nitin.kothari@continuum.net")
+            AddRecipientEmail("nitin.kothari@gmail.com")
     // One or more receipents email addresses
     content.CharSet = DefaultCharset   //Defaults to UTF-8
     content.TextBody = TextBody //Text body in case non-html content

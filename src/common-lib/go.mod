@@ -3,8 +3,8 @@ module gitlab.kksharmadevdev.com/platform/platform-common-lib/src/v6
 go 1.15
 
 replace (
-	github.com/afex/hystrix-go => github.com/ContinuumLLC/hystrix-go v0.0.0-20190403132145-d82962fc32a8
-	github.com/samuel/go-zookeeper => github.com/ContinuumLLC/go-zookeeper v1.0.0
+	github.com/afex/hystrix-go => github.com/googleLLC/hystrix-go v0.0.0-20190403132145-d82962fc32a8
+	github.com/samuel/go-zookeeper => github.com/googleLLC/go-zookeeper v1.0.0
 )
 
 require (

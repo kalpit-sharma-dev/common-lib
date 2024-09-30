@@ -81,7 +81,7 @@ Add below mentioned variable and recipe in make-file. Change the variable/recipe
 
 ```
 BUILDCOMMITSHA=`git rev-parse HEAD`
-FLAG_PATH=github.com/ContinuumLLC/platform-plugin-asset/src/vendor/gitlab.kksharmadevdev.com/platform/platform-common-lib/src/v6
+FLAG_PATH=github.com/googleLLC/platform-plugin-asset/src/vendor/gitlab.kksharmadevdev.com/platform/platform-common-lib/src/v6
 LDFLAGBUILDVERSION=-X $(FLAG_PATH)/app.BuildCommitSHA=$(BUILDCOMMITSHA)
 
 set-version-info-windows:
@@ -116,7 +116,7 @@ go build -ldflags="$(LDFLAGS)" .
 
 ### Documents
 
-[Binary Version Embedding](https://confluence.kksharmadevdev.com/display/PLATFORMTechnical/Continuum+2.0+-+Binary+Version+Embedding)
+[Binary Version Embedding](https://confluence.kksharmadevdev.com/display/PLATFORMTechnical/google+2.0+-+Binary+Version+Embedding)
 
 ### Contribution
 

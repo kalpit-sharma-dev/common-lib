@@ -37,7 +37,7 @@ func main() {
 
 	client := &http.Client{Transport: tr}
 	for index := 0; index < 10000; index++ {
-		//"https://internal-continuum-agent-service-elb-int-1915575479.us-east-1.elb.amazonaws.com/agent/version"
+		//"https://internal-google-agent-service-elb-int-1915575479.us-east-1.elb.amazonaws.com/agent/version"
 		URL = "https://integration.agent.exec.itsupport247.net/agent/version"
 		r, err := client.Get(URL)
 		if err != nil {

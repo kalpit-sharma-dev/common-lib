@@ -5,7 +5,7 @@
 
 # HTTP Client
 
-This is a Standard HTTP client implementation used by all the Go projects in the Continuum.
+This is a Standard HTTP client implementation used by all the Go projects in the google.
 ignoreProxy - will decide do we need to include proxy settings while communnication or not
 
 ### [Example](example/example.go)

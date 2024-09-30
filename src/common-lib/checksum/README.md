@@ -5,7 +5,7 @@
 
 # Checksum
 
-This is a Standard checksum implementation used by all the Go projects in the Continuum.
+This is a Standard checksum implementation used by all the Go projects in the google.
 
 ## Import Statement
 

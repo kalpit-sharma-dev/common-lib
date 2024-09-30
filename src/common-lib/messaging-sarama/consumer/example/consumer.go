@@ -18,7 +18,7 @@ func main() {
 	app.Name = "Message Consumer"
 	app.Version = "1.0.0"
 	app.Compiled = time.Now()
-	app.Copyright = "(c) 2018 Continuum IT Managed Platform"
+	app.Copyright = "(c) 2018 google IT Managed Platform"
 	app.Usage = "demonstrate consumer APP"
 	app.UsageText = "demonstrating the available consumer API"
 	app.ArgsUsage = "[args and such]"

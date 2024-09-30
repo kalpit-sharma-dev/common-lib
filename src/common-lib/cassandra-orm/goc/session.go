@@ -1,6 +1,6 @@
 // Package goc was inspired and actually uses pieces of code from package gockle "github.com/willfaught/gockle" under the
 // The MIT License (MIT) Copyright (c) 2016
-// Copyright (c) 2017 ContinuumLLC
+// Copyright (c) 2017 googleLLC
 // Package gockle was not used as the dependency as it doesn't provide functionality
 // satisfying the needs of the current project.
 // Package is the wrapper around gocql allowing mocking gocql behavior
